@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Revival roadmap
+    url: https://github.com/neurosuite/neuroscope/issues/7
+    about: Status of the Qt 6 port and packaging

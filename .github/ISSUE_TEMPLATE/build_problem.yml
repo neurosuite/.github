@@ -1,0 +1,16 @@
+name: Build problem
+description: The source does not configure or compile
+labels: [build]
+body:
+  - type: input
+    id: env
+    attributes:
+      label: OS, compiler, CMake and Qt versions
+      placeholder: "Ubuntu 24.04, GCC 13, CMake 3.28, Qt 6.4.2"
+    validations: { required: true }
+  - type: textarea
+    id: log
+    attributes:
+      label: Full cmake configure and build log
+      render: shell
+    validations: { required: true }

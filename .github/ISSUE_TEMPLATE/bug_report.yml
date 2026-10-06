@@ -1,0 +1,36 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options: [neuroscope, klusters, ndmanager, ndmanager-plugins, libneurosuite, other]
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "2.0.0, 3.0.0, or a git commit hash"
+    validations: { required: true }
+  - type: input
+    id: env
+    attributes:
+      label: OS and Qt version
+      placeholder: "Ubuntu 24.04, Qt 6.4.2"
+  - type: dropdown
+    id: install
+    attributes:
+      label: How was it installed?
+      options: [built from source, GitHub release package, SourceForge package (2.0.0), other]
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations: { required: true }
+  - type: textarea
+    id: files
+    attributes:
+      label: Sample files
+      description: A small .xml/.dat/.nrs that triggers the problem helps a lot.
